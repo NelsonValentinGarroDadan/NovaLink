@@ -1,0 +1,206 @@
+:root{
+    --color-white: #fafafa;
+    --color-gray: rgba(250, 250, 250,.8);
+    --color-transparent-black: rgba(12, 13, 16,.8);
+    --color-black: rgb(12, 13, 16);
+}
+@font-face {
+  font-family: 'Poppins';
+  src: url('../public/fonts/Poppins/Poppins-Regular.ttf') ;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Orbitron';
+  src: url('../public/fonts/Orbitron/static/Orbitron-Regular.ttf')  ;
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none; 
+}
+
+body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    color: #e0e0e0;
+}
+/* Animacion del fondo en todas las paginas */
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, #0b0f1a 0%, #1a1f35 50%, #0b0f1a 100%);
+    background-size: 200% 200%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.particles-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+/* Header */
+header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Orbitron', sans-serif;
+    background-color: var(--color-transparent-black);
+}
+header a{ 
+    color: var(--color-white);
+    font-size: 2em;
+    font-weight: bold;
+}
+header a:hover{
+    text-shadow: 0 0 5px var(--color-gray);
+}
+header .nav-links{
+    display: flex;
+    gap: 1.5em;
+    align-items: center;
+    justify-content: center;
+}
+header .nav-links a{ 
+    color: var(--color-gray);
+    font-size: 1em;
+    transition: color 0.3s;
+}
+header .nav-links a#active,
+header .nav-links a:hover{
+    color: var(--color-white); 
+}
+.burger{
+    display: none;;
+}
+/* Commons */
+.hero-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+    align-items: center;
+    text-align: center;
+    padding: 5em auto;
+    margin-top: 10em;
+    gap: 1.5em;
+}
+.hero-section .title{
+    font-family: 'Orbitron',sans-serif;
+    color: var(--color-white);
+    font-size: 6em;
+}
+.hero-section .des{
+    font-family: 'Poppins',sans-serif;
+    color: var(--color-gray);
+    font-size: 1.5em;  
+}
+/* HOME */
+#btn-home-to-missions{
+    color: var(--color-white);
+    padding: .4em 1.5em;
+    border: 2px solid var(--color-white);
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 1.2em;
+    box-shadow: 0 0 10px var(--color-gray);
+    transition: background-color 0.3s, color 0.3s;
+}
+#btn-home-to-missions:hover{
+    background-color: var(--color-white);
+    color: var(--color-transparent-black); 
+}
+
+/* Media querys */
+@media (max-width: 768px) {
+    .header{
+        position: relative;
+    } 
+    .nav-links{
+        position: absolute;
+        right: -100vw;
+        top:0;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        transition: all 0.3s ease-in-out;
+        gap:2em;
+    }
+    header .nav-links a{  
+        font-size: 2em; 
+    }
+    .burger{
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 2em; 
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 100;
+        gap:.5em
+    } 
+    .burger.active{
+        height: 2em;
+        background-color: var(--color-transparent-black);
+    }
+    .burger #bar-1,
+    .burger #bar-0,
+    .burger #bar-2{
+        display: block;
+        width: 100%;
+        height: 2px;
+        border-radius: 25px;
+        background-color: var(--color-white);
+        transition: all 0.3s ease-in-out;
+    }
+    .burger.active #bar-1{
+        opacity: 0;
+    }
+    .burger.active #bar-0,
+    .burger.active #bar-2
+    {
+        position: absolute;
+        top: 50%;
+        left: 0; 
+    }
+    .burger.active #bar-0{
+        transform: translateY(-50%) rotate(45deg);
+    }
+    .burger.active #bar-2{
+        transform: translateY(-50%) rotate(-45deg);
+    }
+    .nav-links.show{
+        right: 0;
+        background-color: var(--color-black);
+    }  
+    .hero-section .title{ 
+        font-size: 4em; 
+    }
+    .hero-section .des{
+        font-size: 1.7em;  
+    }
+}
