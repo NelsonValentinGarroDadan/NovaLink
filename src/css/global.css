@@ -26,7 +26,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap:10em;   
+    gap:8em;   
 }
 /* Animacion del fondo en todas las paginas */
 .animated-bg {
