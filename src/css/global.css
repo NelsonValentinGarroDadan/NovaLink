@@ -134,6 +134,7 @@ section .subdes{
     font-family: 'Poppins',sans-serif;
     color: var(--color-gray);
     font-size: 1.5em;  
+    width: 80%;
 }
 
 /* Media querys */
