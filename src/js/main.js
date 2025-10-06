@@ -2,6 +2,7 @@ import initParticleEffect  from './effectBg.js'
 import getHeader from './components/header.js'
 import Carucel from './components/carucel.js';
 import setCard from './components/cards.js';
+import getFooter from './components/footer.js';
 
 //agregando canvas
 const body = document.body;
@@ -82,3 +83,25 @@ if(cardContainerHome2)
             description: "Solar-Powered InfrastructureAll our satellites and relay stations are powered by next-generation solar panels with 95% efficiency, making our network sustainable and environmentally responsible.",
         }
     ]);
+const cardContainerHome3 = document.getElementById('card-container-home-3');
+if(cardContainerHome3) 
+    setCard(cardContainerHome3,[
+        {
+            title: "150+",
+            description: "Active Satellites",
+        },
+        {
+            title: "12",
+            description: "Planetary Missions",
+        },
+        {
+            title: "99.99%",
+            description: "Network Uptime",
+        },
+        {
+            title: "24 / 7",
+            description: "Mission Control",
+        },  
+    ]);
+
+getFooter(body)
