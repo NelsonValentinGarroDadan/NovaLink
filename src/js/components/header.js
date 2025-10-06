@@ -32,17 +32,19 @@ export default function getHeader(links){
     nav.className = "nav-links";
     const burgerButton = getBurgerButton(nav); 
 
-    const current = window.location.pathname.replace(/index\.html$/, "");
+    const current = window.location.pathname.replace(/index\.html$/, "").replace(/^\//, "");
 
     for(const link of links){
         const a = document.createElement("a");
         a.href = link.href;
         a.textContent = link.text; 
+        const normalizedHref = link.href.replace(/^\.?\//, "");
+
         if (
-            (link.href !== "/" && current.includes(link.href)) ||
-            (link.href === "/" && (current === "/" || current === ""))
+            (normalizedHref !== "" && current.includes(normalizedHref)) ||
+            (normalizedHref === "" && (current === "" || current === "index.html"))
         ) {
-            a.id = "active";  
+            a.id = "active";
         }
         nav.appendChild(a);
     }
