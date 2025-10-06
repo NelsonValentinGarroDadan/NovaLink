@@ -66,3 +66,19 @@ if(cardContainerHome1)
         imgSrc: "./public/icons/home/bolt.png"
     },
 ]);
+const cardContainerHome2 = document.getElementById('card-container-home-2');
+if(cardContainerHome2) 
+    setCard(cardContainerHome2,[
+        {
+            title: "Quantum Entanglement Network",
+            description: "Our revolutionary quantum communication system uses entangled particles to transmit information instantaneously across vast distances, breaking the light-speed barrier for data transmission.", 
+        },
+        {
+            title: "AI-Powered Signal Processing",
+            description: "Advanced artificial intelligence algorithms optimize signal routing, reduce interference, and predict maintenance needs before failures occur, ensuring maximum reliability.",
+        },
+        {
+            title: "Solar-Powered Infrastructure",
+            description: "Solar-Powered InfrastructureAll our satellites and relay stations are powered by next-generation solar panels with 95% efficiency, making our network sustainable and environmentally responsible.",
+        }
+    ]);

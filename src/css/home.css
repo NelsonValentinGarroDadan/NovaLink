@@ -133,8 +133,38 @@
 }
 #card-container-home .card p{
     font-size: .9em;
-    color: var(--color-light-gray); 
+    color: var(--color-gray); 
     min-height: 5em;
+    font-family: 'Poppins', sans-serif;
+}
+#card-container-home-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    width: 80%; 
+}
+#card-container-home-2 .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: var(--color-transparent-black);
+    border-radius: 5%;
+    padding: 2em;
+    gap: 2em;
+    text-align: left;
+    width: 100%;
+}
+#card-container-home-2 .card h3{ 
+    font-size: 1.3em;
+    color: var(--color-white);
+    width: 100%; 
+    font-family: 'Orbitron', sans-serif;
+}
+#card-container-home-2 .card p{
+    font-size: .9em;
+    color: var(--color-gray);  
     font-family: 'Poppins', sans-serif;
 }
 /* Media querys */
