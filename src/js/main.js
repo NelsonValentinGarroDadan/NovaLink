@@ -27,22 +27,23 @@ getHeader([
 //generando carucel
 Carucel([
   {
-    url: "./public/imgs/futuristic-rocket-launching-into-space.jpg",
+    url: "./public/imgs/home/futuristic-rocket-launching-into-space.jpg",
     alt: "Rocket Launch",
   },
   {
-    url: "./public/imgs/astronaut-floating-in-space-with-earth.jpg",
+    url: "./public/imgs/home/astronaut-floating-in-space-with-earth.jpg",
     alt: "Astronaut in Space",
   },
   {
-    url: "./public/imgs/mars-planet-surface-exploration.jpg",
+    url: "./public/imgs/home/mars-planet-surface-exploration.jpg",
     alt: "Mars Exploration",
   },
   {
-    url: "./public/imgs/space-station-orbiting-earth.jpg",
+    url: "./public/imgs/home/space-station-orbiting-earth.jpg",
     alt: "Space Station",
   },
 ])
+//generando cards Home
 const cardContainerHome1 = document.getElementById('card-container-home');
 if(cardContainerHome1) 
     setCard(cardContainerHome1,[
@@ -103,5 +104,13 @@ if(cardContainerHome3)
             description: "Mission Control",
         },  
     ]);
-
+//generando cards Missions
+const cardContainerMissions = document.getElementById('card-container-missions');
+if(cardContainerMissions) setCard(cardContainerMissions,[
+        {
+            title: "Lunar Relay",
+            description: "A communication satellite orbiting the Moon to facilitate data transfer between lunar bases and Earth.",
+            imgSrc: "./public/icons/missions/moon.png"
+        }
+    ]);
 getFooter(body)
