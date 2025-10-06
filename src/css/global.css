@@ -6,24 +6,16 @@
 }
 @font-face {
   font-family: 'Poppins';
-  src: url('../public/fonts/Poppins/Poppins-Regular.ttf') ;
+  src: url('../../public/fonts/Poppins/Poppins-Regular.ttf') ;
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Orbitron';
-  src: url('../public/fonts/Orbitron/static/Orbitron-Regular.ttf')  ;
+  src: url('../../public/fonts/Orbitron/static/Orbitron-Regular.ttf')  ;
   font-weight: normal;
   font-style: normal;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-a{
-    text-decoration: none; 
 }
 
 body {
@@ -69,6 +61,7 @@ header{
     align-items: center;
     font-family: 'Orbitron', sans-serif;
     background-color: var(--color-transparent-black);
+    z-index: 100;
 }
 header a{ 
     color: var(--color-white);
@@ -117,21 +110,7 @@ header .nav-links a:hover{
     color: var(--color-gray);
     font-size: 1.5em;  
 }
-/* HOME */
-#btn-home-to-missions{
-    color: var(--color-white);
-    padding: .4em 1.5em;
-    border: 2px solid var(--color-white);
-    border-radius: 5px;
-    font-family: 'Poppins',sans-serif;
-    font-size: 1.2em;
-    box-shadow: 0 0 10px var(--color-gray);
-    transition: background-color 0.3s, color 0.3s;
-}
-#btn-home-to-missions:hover{
-    background-color: var(--color-white);
-    color: var(--color-transparent-black); 
-}
+
 
 /* Media querys */
 @media (max-width: 768px) {
@@ -197,10 +176,4 @@ header .nav-links a:hover{
         right: 0;
         background-color: var(--color-black);
     }  
-    .hero-section .title{ 
-        font-size: 4em; 
-    }
-    .hero-section .des{
-        font-size: 1.7em;  
-    }
 }
