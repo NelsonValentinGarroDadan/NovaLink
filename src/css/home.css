@@ -21,17 +21,24 @@
     position: relative; 
     display: flex; 
 }
+.slider{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
 .slide{
     position: absolute;
     top: 0;
     right: -40vw;
-    opacity: 0;
-    width: 70vw;
-    height: 90vh; 
+    opacity: 0; 
+    width: 100%;
+    height: 100%; 
 }
 .slide.active{
     transition: opacity .5s ease-in-out;
     right: 0;
+    display: block;
     opacity: 1;
     z-index: 1;
 }
@@ -72,8 +79,7 @@
     align-items: center;
     height: 2.5em;
     width: 3em;
-    top: 50%; 
-    transform: translateY(-50%);  
+    top: 50%;   
     background-color: var(--color-gray); 
     border-radius: 50%;
     cursor: pointer; 
@@ -89,17 +95,62 @@
 }
 .right-arrow{
     right: 1em;
+    transform: translateY(-50%);
 }
 .left-arrow{
     left: 1em;
-    transform: rotate(180deg) ;
+    transform: translateY(-50%) rotate(180deg);
+}
+#card-container-home{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5em; 
+    width: 80%; 
+}
+#card-container-home .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--color-transparent-black);
+    border-radius: 5%;
+    padding: 2em 1em;
+    gap: 1em;
+    text-align: left;
+}   
+#card-container-home .card img{ 
+    height: 6em;
+    width: 4.5em;  
+    padding: .5em;
+    border-radius: 50%;
+    object-fit: contain;
+}
+#card-container-home .card h3{
+    font-size: 1.3em;
+    color: var(--color-white);
+    width: 100%; 
+    font-family: 'Orbitron', sans-serif;
+}
+#card-container-home .card p{
+    font-size: .9em;
+    color: var(--color-light-gray); 
+    min-height: 5em;
+    font-family: 'Poppins', sans-serif;
 }
 /* Media querys */
 @media (max-width: 768px) { 
-    .hero-section .title{ 
-        font-size: 4em; 
+    
+    #card-container-home{ 
+        grid-template-columns: repeat(2, 1fr); 
     }
-    .hero-section .des{
-        font-size: 1.7em;  
+    #carucel{ 
+        width: 95vw;
+        height: 90vh; 
     }
+}
+
+@media (max-width: 480px) {  
+    #card-container-home{ 
+        grid-template-columns:  repeat(1, 1fr) 
+    } 
 }

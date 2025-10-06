@@ -1,4 +1,4 @@
-function setCarucel(imgs,carucelContainer){
+function setCarucel(imgs,carucelContainer,sliderContainer){
     const sliders = [];
     const markerContainer = document.createElement('div');
     markerContainer.setAttribute('id','markers');
@@ -19,7 +19,7 @@ function setCarucel(imgs,carucelContainer){
         markerContainer.appendChild(markerElement);
         slidePrototype.appendChild(imgElement); 
         sliders.push(slidePrototype);
-        carucelContainer.appendChild(slidePrototype);
+        sliderContainer.appendChild(slidePrototype);
     }
     const rightArrow = document.createElement('div');
     const iconRight = document.createElement('img');
@@ -52,9 +52,10 @@ function updateSlide(index,sliders,markers) {
 
 export default function Carucel(imgs) {
     const carucelContainer = document.getElementById('carucel');
+    const sliderContainer = document.getElementsByClassName('slider')[0];
     if(!carucelContainer) return; 
     let index = 0;
-    const sliders = setCarucel(imgs,carucelContainer); 
+    const sliders = setCarucel(imgs,carucelContainer,sliderContainer); 
     const markers = document.getElementsByClassName('marker');  
  
     // Auto Slide
