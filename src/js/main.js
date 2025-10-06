@@ -20,8 +20,8 @@ initParticleEffect()
 //agregando header
 getHeader([
     {href: "/", text: "Home"},
-    {href: "/missions", text: "Missions"},
-    {href: "/contact", text: "Contact"}, 
+    {href: "./src/pages/missions.html", text: "Missions"},
+    {href: "./src/pages/contact.html", text: "Contact"}, 
 ]);
 
 //generando carucel
