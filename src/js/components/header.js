@@ -32,7 +32,7 @@ export default function getHeader(links){
     nav.className = "nav-links";
     const burgerButton = getBurgerButton(nav); 
 
-    const current = window.location.pathname.replace(/index\.html$/, "").replace(/^\//, "");
+    const current = window.location.pathname.replace(/NovaLink$/, "").replace(/^\//, "");
 
     for(const link of links){
         const a = document.createElement("a");
