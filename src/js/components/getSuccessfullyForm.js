@@ -1,19 +1,10 @@
 export default function GetSuccessfullyForm(data,form){
     const labels = {
-  fullname: "Full Name",
-  email: "Email",
-  phone: "Phone",
-  message: "Message"
-};
-
-    /*
-        {
-            fullname: "picado",
-            email: "example@gmail.com",
-            phone: "1234567812",
-            message: "holasas"
-        }
-    */
+        name: "Full Name",
+        email: "Email",
+        phone: "Phone",
+        message: "Message"
+    }; 
     const successContainer = document.createElement('div');
     successContainer.setAttribute('id','success-container');
 
