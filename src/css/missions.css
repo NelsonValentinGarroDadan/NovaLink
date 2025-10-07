@@ -147,6 +147,7 @@
     height: 8em;
     width: 8em;
 }
+/* Media querys */
 @media (max-width: 768px) {
     #card-container-missions{ 
         grid-template-columns: repeat(2,1fr);
