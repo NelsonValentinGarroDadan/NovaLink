@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="shortcut icon" href="../../public/favicon.ico" type="image/x-icon">
+    <title>NovaLink - Missions</title> 
+</head>
+</head>
+<body> 
+    <section class="hero-section">
+        <h1 class="title">Get in Touch</h1>
+        <p class="des">Ready to explore the future of space communication? Contact our team today.</p>
+    </section>
+    <div id="card-container-contact"></div>
+    <section id="form-container">
+        <form id="form">
+            <h2>Contact Form</h2>
+            <p>Fill out the form below and we'll get back to you within 24 hours</p>
+            <label for="name">Full Name <span class="required_i">*</span></label>
+            <input id="name" placeholder="John Doe" min="2" max="50" type="text" required/>
+            <p class="error" id="error_name"></p>
+            <label for="email">Email <span class="required_i">*</span></label>
+            <input id="email" placeholder="john@example.com" type="email" required/>
+            <p class="error" id="error_email"></p>
+            <label for="phone">Phone <span class="required_i">*</span></label>
+            <input id="phone" min="10" placeholder="2664 111111" type="tel" required/>
+            <p class="error" id="error_phone"></p>
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell us about your project or inquiry..." minlength="3"></textarea>
+            <p class="error" id="error_email"></p>
+            <button type="submit">Send Message</button>
+        </form>  
+    </section>
+        
+    <section>
+        <h2 class="subtitle">Frequently Asked Questions</h2>
+        <div id="card-container-contact-2"></div>
+    </section>
+    <script type="module" src="../js/main.js"></script>
+</body>
+</html>

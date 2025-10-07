@@ -1,8 +1,9 @@
-import initParticleEffect  from './effectBg.js'
+import initParticleEffect  from './components/effectBg.js'
 import getHeader from './components/header.js'
 import Carucel from './components/carucel.js';
 import setCard from './components/cards.js';
-import getFooter from './components/footer.js';   
+import getFooter from './components/footer.js'; 
+import submitForm from './submitForm.js'  
 
 //agregando canvas
 const body = document.body;
@@ -194,4 +195,51 @@ if(cardContainerMissions3)  setCard(cardContainerMissions3, [
             imgSrc: "../../public/icons/missions/location.png"
         },
     ]);
+//generadndo cards Contacts
+const cardContainerContact = document.getElementById('card-container-contact');
+if(cardContainerContact) setCard(cardContainerContact,[
+        {
+            title:"Email",
+            description:"contact@novalink.space",
+            imgSrc:"../../public/icons/missions/mail.png"
+        },
+        {
+            title:"Phone",
+            description:"+1 (555) 123-4567",
+            imgSrc:"../../public/icons/missions/telephone.png"
+        },
+        {
+            title:"Location",
+            description:"Houston, TX 77058",
+            imgSrc:"../../public/icons/missions/location.png"
+        },
+        {
+            title:"Hours",
+            description:"24/7 Mission Control",
+            imgSrc:"../../public/icons/missions/clock.png"
+        },
+    ]);
+const cardContainerContact2 = document.getElementById('card-container-contact-2');
+if(cardContainerContact2) setCard(cardContainerContact2,[
+        {
+            title:"How reliable is your communication network?",
+            description:"Our network maintains 99.99% uptime with redundant systems and fail-safe protocols. We have backup satellites and relay stations to ensure continuous communication even during maintenance or unexpected events."
+        },
+        {
+            title:"What is the latency for Mars communication?",
+            description:"Traditional radio communication to Mars has a 4-24 minute delay depending on planetary positions. Our quantum entanglement system reduces this to near-instantaneous transmission for critical data."
+        },
+        {
+            title:"Can private companies use your network?",
+            description:"Yes! We offer commercial packages for private space companies, research institutions, and government agencies. Contact our sales team to discuss your specific communication needs."
+        },
+    ]);
+//Logica del formulario
+const form = document.getElementById('form');
+if(form){
+    form.addEventListener("submit",(e)=>{
+        e.preventDefault();
+        submitForm(form)
+    })
+}
 getFooter(body)

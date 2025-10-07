@@ -1,0 +1,185 @@
+/* Contact */
+#card-container-contact{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1.5em; 
+    width: 60%;
+    justify-items: center; 
+} 
+#card-container-contact .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between; 
+    background-color: var(--color-transparent-black);
+    border-radius: 5%;
+    padding: 2em 1em;
+    gap: 1em;
+    text-align: left;
+    width: 20em;
+}   
+#card-container-contact .card img{ 
+    height: 4em;
+    width: 4em;  
+    padding: .5em; 
+    object-fit: contain;
+}
+#card-container-contact .card h3{
+    font-size: 1.3em;  
+}
+#card-container-contact .card p{
+    font-size: .9em;  
+}
+/* Formulario */
+#form-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#form,
+#success-container{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: flex-start;
+    padding: 2em;
+    gap:.7em;
+    background-color: var(--color-transparent-black);
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(0,188,212,0.1);
+    width: 70%;
+    font-family: 'Poppins',sans-serif;
+    color: var(--color-white);
+    font-size: 1.2em;
+}
+#form h2{
+    font-family: 'Orbitron',sans-serif;
+    font-size: 2em;  
+}
+#form p{  
+    color: var(--color-gray);
+    margin: .4em 0;
+}
+#form label{
+    box-decoration-break: none;
+    cursor: pointer;
+}
+#form input,
+#form textarea{
+    padding: .6em .4em;
+    border-radius: 10px;
+    background-color: rgb(38, 38, 38);
+    border:none;
+    font-size: 1em;
+    width: 100%; 
+    color: var(--color-white);
+}
+#form input:focus,
+#form textarea:focus {
+    outline: none;
+    border: 1px solid var(--color-white);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+#form textarea{
+    resize: none;
+    height: 10em;
+    overflow: auto;
+}
+#form .required_i{
+    margin-left: .4em;
+    color: var(--color-red);
+    font-size: 1em;
+}
+#form button{
+    width: 100%;
+    padding: .4em 0;
+    box-shadow: 0 0 10px var(--color-white);
+    border-radius: 10px;
+    border: 1px solid var(--color-white);
+    color: var(--color-white);
+    background-color: var(--color-transparent-black);
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    font-size: 1.2em;
+    margin: .3em 0;
+}
+#form button:hover{
+    background-color: var(--color-white);
+    color:  var(--color-transparent-black);
+}
+#form .error{
+    color: var(--color-red);
+    font-size: .8em;
+    width: 100%;
+}
+#success-container  h2{
+    font-family: 'Orbitron',sans-serif;
+    font-size: 1.4em; 
+    color: #00be4d;
+}
+#success-container p{ 
+    color: var(--color-gray);
+    font-size: .9em;
+    margin-top: .8em;
+}
+#success-container span{
+    background-color: #00be4d;
+    border-radius: 15px;
+    height: 1px;
+    width: 100%;
+}
+#success-container p.title-successfully{
+    color: var(--color-gray);
+    font-size: .8em;
+    margin: 0;
+}
+#success-container .des-successfully{
+    font-size: 1em;
+    color: var(--color-white);
+    margin: 0;
+}
+/* FAQ */
+#card-container-contact-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    width: 80%; 
+}
+#card-container-contact-2 .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    background-color: var(--color-transparent-black);
+    border-radius: 5%;
+    padding: 2em;
+    gap: 2em;
+    text-align: left;
+    width: 100%;
+}
+#card-container-contact-2 .card h3{ 
+    font-size: 1.3em; 
+    width: 100%;  
+}
+#card-container-contact-2 .card p{
+    font-size: .9em; 
+}
+#card-container-contact-2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1.5em;
+    width: 80%;
+}
+/* Media querys */
+@media (max-width: 768px) { 
+    #card-container-contact{ 
+        grid-template-columns: repeat(1,1fr); 
+    }
+}
+@media (max-width: 480px) {  
+    
+}
