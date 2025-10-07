@@ -20,9 +20,9 @@ initParticleEffect()
 
 //agregando header
 getHeader([
-    {href: "/Novalink/", text: "Home"},
-    {href: "/Novalink/src/pages/missions.html", text: "Missions"},
-    {href: "/Novalink/src/pages/contact.html", text: "Contact"}, 
+    {href: "/NovaLink/", text: "Home"},
+    {href: "/NovaLink/src/pages/missions.html", text: "Missions"},
+    {href: "/NovaLink/src/pages/contact.html", text: "Contact"}, 
 ]);
 
 //generando carucel

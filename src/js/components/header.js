@@ -27,7 +27,7 @@ export default function getHeader(links){
     const header = document.createElement("header");
     const titleHeader = document.createElement("a");
     titleHeader.textContent = "NovaLink";
-    titleHeader.href = "/";
+    titleHeader.href = "/NovaLink";
     const nav = document.createElement("nav");
     nav.className = "nav-links";
     const burgerButton = getBurgerButton(nav); 
