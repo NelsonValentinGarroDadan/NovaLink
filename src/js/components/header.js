@@ -27,23 +27,25 @@ export default function getHeader(links){
     const header = document.createElement("header");
     const titleHeader = document.createElement("a");
     titleHeader.textContent = "NovaLink";
-    titleHeader.href = "/NovaLink";
+    titleHeader.href = "/NovaLink/";
     const nav = document.createElement("nav");
     nav.className = "nav-links";
     const burgerButton = getBurgerButton(nav); 
 
-    const current = window.location.pathname.replace(/NovaLink$/, "").replace(/^\//, "");
+    // Obtener la ruta actual relativa al repo
+    const currentPath = window.location.pathname
+        .replace(/^\/|\/$/g, ""); // elimina / al inicio y al final
+        // ejemplo: "NovaLink/src/pages/missions.html"
 
     for(const link of links){
         const a = document.createElement("a");
         a.href = link.href;
         a.textContent = link.text; 
-        const normalizedHref = link.href.replace(/^\.?\//, "");
-
-        if (
-            (normalizedHref !== "" && current.includes(normalizedHref)) ||
-            (normalizedHref === "" && (current === "" || current === "index.html"))
-        ) {
+        
+        // Normaliza la href para comparación
+        const normalizedHref = link.href.replace(/^\/|\/$/g, "");
+        
+        if(normalizedHref === currentPath || (normalizedHref === "NovaLink" && currentPath === "NovaLink")){
             a.id = "active";
         }
         nav.appendChild(a);
