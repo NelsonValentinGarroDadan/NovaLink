@@ -1,0 +1,174 @@
+/* Missions Cards */
+#card-container-missions{
+    width: 80%;
+    margin: 0 auto;
+    display: grid; 
+    justify-items: center;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2em;
+}
+#card-container-missions .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 1em;
+    background-color: var(--color-transparent-black);
+    border: 1px solid var(--color-transparent-black);
+    padding: 25px 0;  
+    overflow: hidden;
+    transition: transform 0.5s ease;  
+    border-radius: 5%;
+}
+#card-container-missions .card:hover{
+    box-shadow: 0 0 5px rgba(255,255,255,.7);
+    transform: translateY(-10px);
+}
+#card-container-missions .card:hover img{
+    transform: scale(1.1);
+}
+#card-container-missions .card img{
+   height: 10em;
+   width: 100%;
+   transition: transform 0.5s ease;    
+}
+#card-container-missions .card h3,
+#card-container-missions .card p{
+    width: 100%;
+    padding:0 15px;
+}
+#card-container-missions .card h3{
+    font-size: 1.6em;;
+}
+#card-container-missions .card p{
+    min-height: 3em;
+}
+/* Timeline missions section */
+#card-container-missions-2{
+    display: flex;
+    flex-direction: column;
+    gap:2em; 
+}  
+#card-container-missions-2 .card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; 
+    border-radius: 15px;
+    background-color: var(--color-transparent-black);
+    gap:1.2em;
+    padding: 1.2em;
+    border: 1px solid transparent;
+    transition: border-color 0.3s ease;
+    width: 80vw;
+}
+#card-container-missions-2  h3,
+#card-container-missions-2  p{
+    width: 100%;
+}
+#card-container-missions-2  p{
+    text-align: left;
+}
+#card-container-missions-2  h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+}
+#card-container-missions-2  h3 span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .5em;
+    font-family: 'Orbitron', sans-serif;
+    color: var(--color-white);
+    gap:.5em;
+}
+#card-container-missions-2 h3 span.pined {
+    display: inline-block;         
+    padding: 0.4em 1em;           
+    border-radius: 9999px;         
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.3em;                
+    text-align: center;           
+}
+#card-container-missions-2  h3 span.completed{
+    color: #00be4d;
+    background-color: #0a3422; 
+}
+#card-container-missions-2  h3 span.inprogress{
+    color: #efb000;
+    background-color: #3a2f11 ; 
+}
+#card-container-missions-2  h3 span.planed{
+    color:var(--color-white);
+    background-color: #3c3e44;
+}
+#card-container-missions-2  h3 span img{
+    height: 1em;
+    width: 1em;
+}
+/*  Control missions section */
+#card-container-missions-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3em;
+    width: 80%; 
+}
+#card-container-missions-3 .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start; 
+    border-radius: 5%;
+    background-color: var(--color-transparent-black);
+    gap:1em;
+    padding: 1em;
+    border: 1px solid rgba(255,255,255,0.4);
+    transition: border-color 0.3s ease;
+}
+
+#card-container-missions-3 .card:hover,
+#card-container-missions-2 .card:hover {
+  border-color: var(--color-white);
+}
+#card-container-missions-3 .card img{
+    height: 3em;
+    width: 3em;
+}
+#card-container-missions-3 .card h3{
+    font-size: 1em;
+}
+#card-container-missions-3 .card p{
+    font-size: .9em;
+}
+/* Our team section*/
+#logo-team{
+    height: 8em;
+    width: 8em;
+}
+@media (max-width: 768px) {
+    #card-container-missions{ 
+        grid-template-columns: repeat(2,1fr);
+    };
+    #card-container-missions .card{ 
+        width: 25em;
+    }
+    #logo-team{
+        height: 5em;
+        width: 5em;
+    }
+    #card-container-missions-3{ 
+        grid-template-columns: repeat(1, 1fr); 
+    }
+}
+@media (max-width: 480px) { 
+    #card-container-missions{ 
+        grid-template-columns: repeat(1,1fr);
+    };
+    #logo-team{
+        height: 3em;
+        width: 3em;
+    }
+    
+}

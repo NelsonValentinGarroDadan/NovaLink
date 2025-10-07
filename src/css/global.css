@@ -90,6 +90,7 @@ header .nav-links a{
 header .nav-links a#active,
 header .nav-links a:hover{
     color: var(--color-white); 
+    text-shadow: 0 0 5px var(--color-gray);
 }
 .burger{
     display: none;;
@@ -136,7 +137,16 @@ section .subdes{
     font-size: 1.5em;  
     width: 80%;
 }
-
+.card h3{ 
+    font-size: 3em;
+    color: var(--color-white); 
+    font-family: 'Orbitron', sans-serif;
+}
+.card p{
+    font-size: 1em;
+    color: var(--color-gray);  
+    font-family: 'Poppins', sans-serif;
+}
 /* Media querys */
 @media (max-width: 768px) {
     .header{
@@ -215,6 +225,12 @@ section .subdes{
     section .subdes{ 
         font-size: 1.1em;  
     }
+    .card h3{ 
+        font-size: 1.6em; 
+    }
+    .card p{
+        font-size: .9em; 
+    }
 }
 @media (max-width: 480px) { 
     .hero-section .title{ 
@@ -229,5 +245,11 @@ section .subdes{
 
     section .subdes{ 
         font-size: 1em;  
+    }
+    .card h3{ 
+        font-size: 2em; 
+    }
+    .card p{
+        font-size: .9em; 
     }
 }

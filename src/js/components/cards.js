@@ -9,7 +9,7 @@ function getCard(title, description, imgSrc) {
     }
      
     const cardTitle = document.createElement('h3');
-    cardTitle.textContent = title;
+    cardTitle.innerHTML = title;
     
     const cardContent = document.createElement('p');
     cardContent.textContent = description;

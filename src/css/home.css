@@ -127,16 +127,12 @@
     object-fit: contain;
 }
 #card-container-home .card h3{
-    font-size: 1.3em;
-    color: var(--color-white);
-    width: 100%; 
-    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3em; 
+    width: 100%;  
 }
 #card-container-home .card p{
-    font-size: .9em;
-    color: var(--color-gray); 
-    min-height: 5em;
-    font-family: 'Poppins', sans-serif;
+    font-size: .9em; 
+    min-height: 5em; 
 }
 /* Cards 2*/
 #card-container-home-2{
@@ -159,15 +155,11 @@
     width: 100%;
 }
 #card-container-home-2 .card h3{ 
-    font-size: 1.3em;
-    color: var(--color-white);
-    width: 100%; 
-    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3em; 
+    width: 100%;  
 }
 #card-container-home-2 .card p{
-    font-size: .9em;
-    color: var(--color-gray);  
-    font-family: 'Poppins', sans-serif;
+    font-size: .9em; 
 }
 /* Stats */
 #card-container-home-3{
@@ -186,14 +178,10 @@
     width: 100%;
 }
 #card-container-home-3 .card h3{ 
-    font-size: 3em;
-    color: var(--color-white); 
-    font-family: 'Orbitron', sans-serif;
+    font-size: 3em; 
 }
 #card-container-home-3 .card p{
-    font-size: 1em;
-    color: var(--color-gray);  
-    font-family: 'Poppins', sans-serif;
+    font-size: 1em; 
 }
 /* Media querys */
 @media (max-width: 768px) { 
@@ -209,22 +197,11 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
-    #card-container-home-3 .card h3{ 
-        font-size: 1.6em; 
-    }
-    #card-container-home-3 .card p{
-        font-size: .9em; 
-    }
+   
 }
 
 @media (max-width: 480px) {  
     #card-container-home{ 
         grid-template-columns:  repeat(1, 1fr) 
-    } 
-    #card-container-home-3 .card h3{ 
-        font-size: 2em; 
-    }
-    #card-container-home-3 .card p{
-        font-size: .9em; 
-    }
+    }  
 }
