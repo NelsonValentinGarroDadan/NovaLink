@@ -180,7 +180,10 @@
     #card-container-contact{ 
         grid-template-columns: repeat(1,1fr); 
     }
-}
-@media (max-width: 480px) {  
-    
-}
+    #form,#form,
+    #success-container,
+    #card-container-contact .card,
+     #card-container-contact{
+        width: 90%;
+    } 
+} 
